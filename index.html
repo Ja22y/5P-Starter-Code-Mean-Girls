@@ -1,0 +1,73 @@
+<!DOCTYPE html> <html><head>
+        <title>5.P Starter Code [Mean Girls]</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: Pink;
+    text-align: center;
+    color: white;
+     font-size: 15px;
+}
+
+img {
+    width: 400px;
+    border: solid 5px;
+}
+
+p{
+color: pink;
+    font-size: 20px;
+}
+
+h4{
+color: white;
+    font-size:29px;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>🎀Which Character In Mean Girls Are You?🎀</h1>
+            <img src="https://baylorlariat.com/wp-content/uploads/2019/02/mean-girls-.jpg">      
+        </div>
+        <div class="questions">
+            <h4>2 or 5?🖤</h4>
+            <input placeholder="type here" class="answer1">
+            <img src="https://m.media-amazon.com/images/I/41ZkRmj+KhL._AC_UF1000,1000_QL80_.jpg">
+            <div></div>          
+            <h4>👗What Do You Prefer, Miniskirts Or Pants?👖</h4>
+            <input placeholder="Answer" class="answer2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA8J3YC30wKIHkZ7cin2xLs4qwuVQwIvo6iqbVdHyfJg&amp;s">
+        </div>
+        <button class="submit">Click Me!</button>
+        <div class="result">
+            this is where the user will see their quiz result!
+        </div>
+ <audio id="myAudio" controls="">
+            <source src="https://cdn.glitch.global/ceecf224-61c4-4403-bbb2-e473bab5039d/pretty-girls.mp3" type="audio/mpeg">
+            
+        </audio>
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector(".submit");
+var result = document.querySelector(".result");
+
+button.onclick = function () {
+  var answer1 = Number(document.querySelector(".answer1").value);
+  var answer2 = document.querySelector(".answer2").value;
+  console.log(answer1);
+
+  if (answer1 > 5 && answer2 === "Pants") {
+    result.innerHTML = " You're Janis Ian";
+  } else if (answer1 <= 5 && answer2 === "Pants") {
+    result.innerHTML = " you're Cady Heron";
+  }
+
+  if (answer1 < 5 && answer2 === "Skirt") {
+    result.innerHTML = "Caren Smith";
+  } else if (answer1 <= 5 && answer2 === "Skirt") {
+    result.innerHTML = " You're Regina George";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsInJlc3VsdCIsIm9uY2xpY2siLCJhbnN3ZXIxIiwiTnVtYmVyIiwidmFsdWUiLCJhbnN3ZXIyIiwiY29uc29sZSIsImxvZyIsImlubmVySFRNTCJdLCJtYXBwaW5ncyI6IkFBQUMsSUFBSUEsTUFBTSxHQUFHQyxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBYjtBQUNELElBQUlDLE1BQU0sR0FBR0YsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLENBQWI7O0FBRUFGLE1BQU0sQ0FBQ0ksT0FBUCxHQUFpQixZQUFXO0FBQ3hCLE1BQUlDLE9BQU8sR0FBR0MsTUFBTSxDQUFDTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsRUFBbUNLLEtBQXBDLENBQXBCO0FBQ0EsTUFBSUMsT0FBTyxHQUFHUCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsRUFBbUNLLEtBQWpEO0FBQ0pFLEVBQUFBLE9BQU8sQ0FBQ0MsR0FBUixDQUFZTCxPQUFaOztBQUNJLE1BQUlBLE9BQU8sR0FBRyxDQUFWLElBQWVHLE9BQU8sS0FBSyxPQUEvQixFQUF3QztBQUN4Q0wsSUFBQUEsTUFBTSxDQUFDUSxTQUFQLEdBQW1CLG1CQUFuQjtBQUNILEdBRkcsTUFFRyxJQUFJTixPQUFPLElBQUksQ0FBWCxJQUFnQkcsT0FBTyxLQUFLLE9BQWhDLEVBQXlDO0FBQzVDTCxJQUFBQSxNQUFNLENBQUNRLFNBQVAsR0FBbUIsb0JBQW5CO0FBQ1U7O0FBQ1QsTUFBSU4sT0FBTyxHQUFHLENBQVYsSUFBZUcsT0FBTyxLQUFLLE9BQS9CLEVBQXdDO0FBQ3JDTCxJQUFBQSxNQUFNLENBQUNRLFNBQVAsR0FBbUIsYUFBbkI7QUFDSCxHQUZBLE1BRU0sSUFBSU4sT0FBTyxJQUFJLENBQVgsSUFBZ0JHLE9BQU8sS0FBSyxPQUFoQyxFQUF5QztBQUM1Q0wsSUFBQUEsTUFBTSxDQUFDUSxTQUFQLEdBQW1CLHVCQUFuQjtBQUNOO0FBQ0QsQ0FkRCIsInNvdXJjZXNDb250ZW50IjpbIiBsZXQgYnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zdWJtaXRcIik7XG5sZXQgcmVzdWx0ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIik7XG5cbmJ1dHRvbi5vbmNsaWNrID0gZnVuY3Rpb24oKSB7XG4gICAgbGV0IGFuc3dlcjEgPSBOdW1iZXIoZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5hbnN3ZXIxXCIpLnZhbHVlKTtcbiAgICBsZXQgYW5zd2VyMiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYW5zd2VyMlwiKS52YWx1ZTtcbmNvbnNvbGUubG9nKGFuc3dlcjEpO1xuICAgIGlmIChhbnN3ZXIxID4gNSAmJiBhbnN3ZXIyID09PSBcIlBhbnRzXCIpIHtcbiAgICByZXN1bHQuaW5uZXJIVE1MID0gXCIgWW91J3JlIEphbmlzIElhblwiO1xufSBlbHNlIGlmIChhbnN3ZXIxIDw9IDUgJiYgYW5zd2VyMiA9PT0gXCJQYW50c1wiKSB7XG4gICAgcmVzdWx0LmlubmVySFRNTCA9IFwiIHlvdSdyZSBDYWR5IEhlcm9uXCI7XG4gICAgICAgICAgICAgfVxuICAgICBpZiAoYW5zd2VyMSA8IDUgJiYgYW5zd2VyMiA9PT0gXCJTa2lydFwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIkNhcmVuIFNtaXRoXCI7XG4gICAgfSBlbHNlIGlmIChhbnN3ZXIxIDw9IDUgJiYgYW5zd2VyMiA9PT0gXCJTa2lydFwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIiBZb3UncmUgUmVnaW5hIEdlb3JnZVwiOyAgXG4gfVxufTsiXX0=</script></body></html>
