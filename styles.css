@@ -1,0 +1,22 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: Pink;
+    text-align: center;
+    color: white;
+     font-size: 15px;
+}
+
+img {
+    width: 400px;
+    border: solid 5px;
+}
+
+p{
+color: pink;
+    font-size: 20px;
+}
+
+h4{
+color: white;
+    font-size:29px;
+}
